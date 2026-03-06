@@ -1,0 +1,45 @@
+# ----- Dependencies -----
+node_modules/
+
+# ----- Build output (rebuilt inside the container) -----
+dist/
+
+# ----- Environment files — NEVER bake secrets into images -----
+.env
+.env.*
+!.env.example
+
+# ----- Git -----
+.git/
+.gitignore
+
+# ----- IDE / Editor -----
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ----- Test and lint config (not needed at runtime) -----
+jest.config.ts
+.eslintrc.json
+.prettierrc
+coverage/
+src/__tests__/
+
+# ----- Docker files (avoid recursive context) -----
+Dockerfile
+docker-compose*.yml
+.dockerignore
+
+# ----- Documentation and misc -----
+*.md
+LICENSE
+claude.md
+CLAUDE.md
+
+# ----- OS artifacts -----
+.DS_Store
+Thumbs.db
+
+# ----- Claude / AI tooling -----
+.claude/
