@@ -22,3 +22,16 @@ export interface AuthResponse {
     name?: string;
   };
 }
+
+export interface UpdateProfileDto {
+  name?: string;
+  email?: string;
+}
+
+export interface UserProfileResponse {
+  id: string;
+  email: string;
+  name?: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
